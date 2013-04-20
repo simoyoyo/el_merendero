@@ -1,0 +1,4 @@
+1) Al momento c'è ancora molta gente che non mi ha segnalato il suo ID su github. FATELO: 
+2) Github e pivotal si integrano abbastanza facilmente: leggete qui:
+   http://stackoverflow.com/questions/13887310/how-can-i-automate-pivotal-tracker-github-integration
+3) Ricordatevi di SALVARE e PORTARVI dietro la vostra chiave privata.
