@@ -1,4 +1,27 @@
+Funzionamento generale:
+    Selezionare una storia non ancora assegnata (github)
+    Se ci lavora più di una persona, indicarle nell'attività
+    Branchare  localmente con NetBeans (ev. anche su github)
+    Sviluppare (RED -> GREEN -> REFACTOR -> REPEAT UNTIL DONE)
+               * Mettere i Junit
+               * Mettere i JavaDoc
+               * Pushare SPESSO nel branch locale e/o in origiN/branch
+               * Non committare in origin
+    Consegna:  
+               * Merge da origin
+               * pushare 
+               * Green? 
+               * Pushare sempre sul branch (vedi 2 sotto)
+               * Click su "Finish" nella storia e segnalarlo al Product Owner
+    Se accettato
+               * Cambio branch
+               * merge del tuo branch
+               * push 
+               * cancella branch locale (opz)
+    Scegli un'altra storia e riparti (github)
+
+
 1) Al momento c'è ancora molta gente che non mi ha segnalato il suo ID su github. FATELO: 
 2) Github e pivotal si integrano abbastanza facilmente: leggete qui:
    http://stackoverflow.com/questions/13887310/how-can-i-automate-pivotal-tracker-github-integration
-3) Ricordatevi di SALVARE e PORTARVI dietro la vostra chiave privata.
+3) Ricordatevi di SALVARE e PORTARVI dietro la vostra chiave privata. 
