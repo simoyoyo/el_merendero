@@ -4,3 +4,6 @@
 *.jar
 *.war
 *.ear
+/El_Merendero/nbproject/private/
+/El_Merendero/build/
+/El_Merendero/dist/
