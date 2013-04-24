@@ -1,0 +1,26 @@
+/* CSS Document */
+
+html, body {
+text-align: center;
+}
+
+body {
+font-family: &quot;Century Gothic&quot;,&quot;Lucida Grande&quot;,Arial,sans-serif;
+/*overflow: hidden; */
+}
+
+#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+#page-wrap { position:relative; width: 400px; margin: 50px auto; padding: 20px; background: white; -moz-box-shadow: 0 0 20px black; -webkit-box-shadow: 0 0 20px black; box-shadow: 0 0 20px black; }
+
+div#slider {
+width: 940px;
+height: 300px;
+background-color: transparent;
+margin: 50px auto;
+box-shadow: 0px 0px 100px 10px black;
+background-color:grey;
+position: relative;
+top: 0px;
+}
