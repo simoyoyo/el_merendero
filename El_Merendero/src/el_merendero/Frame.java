@@ -38,9 +38,12 @@ public class Frame extends JFrame{
     private JButton ordineSingolo=new JButton("Ordine singolo");
     private JLabel lblStampa=new JLabel("Anteprima di stampa:");
     private JLabel lblStato;
+    private JComboBox combo;
     public Frame(){
         super("El merendero");
         setLayout(new BorderLayout());
+        String[] testo={"Ciao","pùw","agagga"};
+        combo=new JComboBox(testo);
         lblStato=new JLabel("Sposta il mouse su un componente per avere le sue caretteristiche");
         add(lblStato,BorderLayout.SOUTH);
         lblStato.setBorder(BorderFactory.createLineBorder(Color.black));
@@ -49,6 +52,8 @@ public class Frame extends JFrame{
         horizontal.add(ordineClasse);
         horizontal.add(Box.createRigidArea( new Dimension( 100, 8 )));
         horizontal.add(ordineSingolo);
+        horizontal.add(Box.createRigidArea( new Dimension( 100, 8 )));
+        horizontal.add(combo);
         ordine=new JPanel();
         anteStampa=new JPanel();
         ordine.add(horizontal);
@@ -160,14 +165,12 @@ public class Frame extends JFrame{
                  HelpItemAbout.setMnemonic('B');
                  HelpItemAbout.addActionListener (
                         new ActionListener() {
-
                             @Override
                             public void actionPerformed(ActionEvent e) {
                                 JOptionPane.showMessageDialog(Frame.this,"El Merendero si occupa della gestione e distribuzioni di un vasto assortimento di alimenti.\nTutto nasce per la necessita' comune di avere a disposizione un ordine real-time , delle merende , \nper quando si hanno verifiche e non si e' in grado di provvedere autonomamente all'acquisto di tali generi.","About",JOptionPane.INFORMATION_MESSAGE);
                             }
                         }
                         );
-        
         setJMenuBar(jmb);
         HoverListener ls=new HoverListener();
         ordineClasse.addMouseListener(ls);

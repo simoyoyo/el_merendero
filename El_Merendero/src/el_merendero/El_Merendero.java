@@ -1,18 +1,24 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package el_merendero;
+import javax.swing.*;
+import java.awt.*;
 
 /**
  *
- * @author piffy
+ * @author b11g8
  */
 public class El_Merendero {
-    /**
-     * (tiene traccia delle versioni)
-     */
-    public static final float VERSION=0.01f; 
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("El Merendero versione "+VERSION);
+        Frame fr=new Frame();
+        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        fr.setSize(800, 600);
+        fr.setVisible(true);
     }
 }
