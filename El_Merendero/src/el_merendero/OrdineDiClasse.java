@@ -17,7 +17,11 @@ public class OrdineDiClasse {
     public OrdineDiClasse(String nomeclasse){
         classe = nomeclasse;
     }
-    
+    /**
+     * Costruttore che definisce le variabili della classe OrdineDiClasse
+     * 
+     * @param ordine 
+     */
     public OrdineDiClasse(Ordine ordine) {
         this.ordine = null;
         this.next = new OrdineDiClasse();
@@ -27,7 +31,11 @@ public class OrdineDiClasse {
     public OrdineDiClasse() {
         next=null;
     }
-
+/**
+     * Metodo per aggiungere un Ordine a un'OrdineDiClasse
+     * 
+     * @param o 
+     */
     public void add(Ordine o) {
         OrdineDiClasse comodo = this;
         while (comodo.getNext() != null) {
@@ -36,23 +44,43 @@ public class OrdineDiClasse {
         comodo.setNext(new OrdineDiClasse());
         comodo.getNext().setOrdine(o);
     }
-
+/**
+     * Getter di default della variabile next
+     * 
+     * @return next
+     */
     public OrdineDiClasse getNext() {
         return next;
     }
-
+/**
+     * Getter di default della variabile ordine
+     * 
+     * @return ordine
+     */
     public Ordine getOrdine() {
         return ordine;
     }
-
+/**
+     * Setter di default
+     * 
+     * @param o 
+     */
     public void setOrdine(Ordine o) {
         this.ordine = o;
     }
-
+/**
+     * Setter di default
+     * 
+     * @param next 
+     */
     public void setNext(OrdineDiClasse next) {
         this.next = next;
     }
-
+/**
+     * Getter di default
+     * 
+     * @return tot
+     */
     public float getTotale() {
         OrdineDiClasse comodo = this.next;
         float tot = 0f;
@@ -62,7 +90,11 @@ public class OrdineDiClasse {
         }
         return tot;
     }
-
+/**
+     * Metodo che restituisce una stringa che contiene l'ordine
+     * 
+     * @return 
+     */
     @Override
     public String toString() {
         String s = "";
