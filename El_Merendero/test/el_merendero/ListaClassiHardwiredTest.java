@@ -42,7 +42,7 @@ public class ListaClassiHardwiredTest {
     @Test
     public void testListaStudentiXClasseData() {
         System.out.println("ListaStudentiXClasse");
-        String nomeclasse = "5C-ELT.txt";
+        String nomeclasse = "5C-ELT";
         ListaClassiHardwired instance = new ListaClassiHardwired();
         String[] expResult = {"AASSIR RIDA","ABBRACCIAVENTO MARCO","BECCANTINI ANDREA","CABRERA JASON","CAMPANALE MATTIA","DISTRATTO DOMENICO","GOLDONI RICCARDO","GUBERMAN VILLAFANE MAURICIO NAHUEL","MARMIROLI NICOLO' DANIEL","SALARDI FILIPPO"};
         String[] result = instance.ListaStudentiXClasseData(nomeclasse);
