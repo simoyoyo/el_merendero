@@ -4,9 +4,9 @@
  */
 package el_merendero;
 
-import Merendeproject.Listamerende;
-import Merendeproject.Merenda;
-import Merendeproject.Ordine;
+import el_merendero.Listamerende;
+import el_merendero.Merenda;
+import el_merendero.Ordine;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
