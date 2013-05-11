@@ -36,6 +36,7 @@ public class Stampante implements Printable {
     private String aula;
     private Calendar data;
     private float soldiForniti;
+    private Ordine ordinepersonale;
 
     /**
      * Costruttore di default che istanzia le liste e carica il logo
@@ -46,6 +47,11 @@ public class Stampante implements Printable {
         prezzi = new LinkedList<Float>();
         image1 = new ImageIcon(this.getClass().getResource("Logo.jpg")).getImage();
     }
+    public void setStampaOrdine(Ordine o ){
+        
+        this.ordinepersonale=o;
+    }
+    
 
     /**
      * Metodo che genera il layout della pagina da stampare
@@ -141,26 +147,35 @@ public class Stampante implements Printable {
     }
 
     void print() throws PrinterException {
-        if (classe == null) {
-            JOptionPane.showMessageDialog(null, "Speficiare una classe prima della stampa", "Classe", 2);
-            return;
-        }
-        if (data == null) {
-            JOptionPane.showMessageDialog(null, "Speficiare una data prima della stampa", "Data", 2);
-            return;
-        }
-        if (aula == null) {
-            JOptionPane.showMessageDialog(null, "Speficiare un'aula prima della stampa", "Aula", 2);
-            return;
-        }
-        if (soldiForniti == 0) {
-            JOptionPane.showMessageDialog(null, "Speficiare i soldi forniti prima della stampa", "Soldi Forniti", 2);
-            return;
-        }
-        if (merende.size() == 0) {
-            JOptionPane.showMessageDialog(null, "Speficiare una merenda prima della stampa", "Merenda", 2);
-            return;
-        }
+//        if (classe == null) {
+//            JOptionPane.showMessageDialog(null, "Speficiare una classe prima della stampa", "Classe", 2);
+//            return;
+//        }
+//        if (data == null) {
+//            JOptionPane.showMessageDialog(null, "Speficiare una data prima della stampa", "Data", 2);
+//            return;
+//        }
+//        if (aula == null) {
+//            JOptionPane.showMessageDialog(null, "Speficiare un'aula prima della stampa", "Aula", 2);
+//            return;
+//        }
+//        if (soldiForniti == 0) {
+//            JOptionPane.showMessageDialog(null, "Speficiare i soldi forniti prima della stampa", "Soldi Forniti", 2);
+//            return;
+//        }
+//        if (merende.size() == 0) {
+//            JOptionPane.showMessageDialog(null, "Speficiare una merenda prima della stampa", "Merenda", 2);
+//            return;
+//        }
+//        if(ordinepersonale.getNomeAcquirente()==null){
+//            JOptionPane.showMessageDialog(null, "Speficiare il nome acquirente", "Nome acquirente", 2);
+//            return;           
+//        }
+        if(ordinepersonale.getMerendeOrdinate()==null){
+            JOptionPane.showMessageDialog(null, "Speficiare le merende ordinate", "merende ordinate", 2);
+            return;           
+        }  
+
         // Creates and returns a PrinterJob which is initially associated with the default printer.
         PrinterJob pj = PrinterJob.getPrinterJob();
         // Sets the name of the document to be printed.
@@ -187,15 +202,28 @@ public class Stampante implements Printable {
      */
     public static void main(String[] args) throws PrinterException {
         Stampante st = new Stampante();
+        Ordine o=new Ordine("Tursi");
+        Listamerende l=new Listamerende();
+        Merenda m=new Merenda(0.5f,"pizza");
+        Merenda z=new Merenda(3f,"pizza");
+        l.add(m);
+        l.add(z);
         GregorianCalendar d = new GregorianCalendar(2013, 11, 22, 23, 12);
-        st.addData(d);
-        st.addClasse("4B Info");
-        st.addAula("216");
-        st.addSoldiForniti(17.5f);
-        st.add("Cotoletta",2, 5.80f);
-        st.add("Hot-Dog",1, 1.20f);
-        st.add("Forno",3, 3.00f);
-        st.add("Piadina",4, 2.50f);
+//        st.addData(d);
+//        st.addClasse("4B Info");
+//        st.addAula("216");
+//        st.addSoldiForniti(17.5f);
+//        st.add("Cotoletta",2, 5.80f);
+//        st.add("Hot-Dog",1, 1.20f);
+//        st.add("Forno",3, 3.00f);
+//        st.add("Piadina",4, 2.50f);
+        o.setSoldiForniti(4.2f);
+        o.setResto();
+        o.getResto();
+        o.setMerendeOrdinate(l);
+        st.setStampaOrdine(o);
         st.print();
+        // Crea im ordine personale
+        //Chioai
     }
 }
