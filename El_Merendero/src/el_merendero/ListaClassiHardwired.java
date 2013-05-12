@@ -72,7 +72,7 @@ public class ListaClassiHardwired {
     
     private void ElencoFile()
     {
-        File file = new File(".");
+        File file = new File(".\\config\\classi");
         if(file.isDirectory())
         {
             File[] filesInDir = file.listFiles();
@@ -81,7 +81,7 @@ public class ListaClassiHardwired {
 	    for(File f : filesInDir)
             {
                 String estensione = ".txt";
-                if(f.isFile() && f.getName().toLowerCase().contains(estensione) && !"merende.txt".equals(f.getName()))
+                if(f.isFile() && f.getName().toLowerCase().contains(estensione))
                 {
                     nomiFile[classiTotali]= f.getName();
                     classiTotali++;
